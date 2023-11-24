@@ -1,0 +1,11 @@
+./venv
+.env
+.vscode
+.vscode/
+.xml/
+.xml
+.venv
+.venv/
+misc.xml
+.idea
+.idea/
