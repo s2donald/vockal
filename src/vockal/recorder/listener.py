@@ -1,7 +1,11 @@
 from pynput import keyboard
 
+from vockal.recorder.player import Player
+from vockal.recorder.record import Recorder
+
+
 class Listener(keyboard.Listener):
-    def __init__(self, recorder, player):
+    def __init__(self, recorder: Recorder, player: Player):
         super().__init__(on_press=self.on_press, on_release=self.on_release)
         self.recorder = recorder
         self.player = player

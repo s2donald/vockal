@@ -1,6 +1,5 @@
 langchain
 sounddevice
-soundfile
 pynput
 playsound
 pyaudio
