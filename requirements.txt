@@ -1,10 +1,7 @@
 langchain
-tweepy
 sounddevice
 soundfile
 pynput
-elevenlabs
-openai
 playsound
 pyaudio
 SpeechRecognition
