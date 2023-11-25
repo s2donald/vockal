@@ -1,6 +1,7 @@
 import speech_recognition as sr
 from vockal.utils.constants import SOUNDFILE
 
+
 def transcribe_audio():
     r = sr.Recognizer()
     with sr.AudioFile(SOUNDFILE) as source:

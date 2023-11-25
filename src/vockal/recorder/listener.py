@@ -1,5 +1,4 @@
 from pynput import keyboard
-
 from vockal.recorder.player import Player
 from vockal.recorder.record import Recorder
 
@@ -17,11 +16,12 @@ class Listener(keyboard.Listener):
             if key.ctrl and self.player.playing == 0:
                 self.recorder.start()
         elif isinstance(key, keyboard.KeyCode):  # alphanumeric key event
-            if key.char == 'q':  # press q to quit
+            if key.char == "q":  # press q to quit
                 if self.recorder.recording:
                     self.recorder.stop()
+                print("Program has been closed")
                 return False  # this is how you stop the listener thread
-            if key.char == 'p' and not self.recorder.recording:
+            if key.char == "p" and not self.recorder.recording:
                 self.player.start()
 
     def on_release(self, key):

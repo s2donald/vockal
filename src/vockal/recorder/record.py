@@ -1,14 +1,17 @@
-import pyaudio
 import wave
+
+import pyaudio
 
 
 class Recorder:
-    def __init__(self,
-                 wavfile,
-                 chunksize=8192,
-                 dataformat=pyaudio.paInt16,
-                 channels=1,
-                 rate=44100):
+    def __init__(
+        self,
+        wavfile,
+        chunksize=8192,
+        dataformat=pyaudio.paInt16,
+        channels=1,
+        rate=44100,
+    ):
         self.filename = wavfile
         self.chunksize = chunksize
         self.dataformat = dataformat
@@ -22,7 +25,7 @@ class Recorder:
         # version of pyaudio streaming. The keyboard listener must regain control to
         # begin listening again for the key release.
         if not self.recording:
-            self.wf = wave.open(self.filename, 'wb')
+            self.wf = wave.open(self.filename, "wb")
             self.wf.setnchannels(self.channels)
             self.wf.setsampwidth(self.pa.get_sample_size(self.dataformat))
             self.wf.setframerate(self.rate)
@@ -32,14 +35,16 @@ class Recorder:
                 self.wf.writeframes(in_data)
                 return (in_data, pyaudio.paContinue)
 
-            self.stream = self.pa.open(format=self.dataformat,
-                                       channels=self.channels,
-                                       rate=self.rate,
-                                       input=True,
-                                       stream_callback=callback)
+            self.stream = self.pa.open(
+                format=self.dataformat,
+                channels=self.channels,
+                rate=self.rate,
+                input=True,
+                stream_callback=callback,
+            )
             self.stream.start_stream()
             self.recording = True
-            print('recording started')
+            print("Recording started")
 
     def stop(self):
         if self.recording:
@@ -48,6 +53,4 @@ class Recorder:
             self.wf.close()
 
             self.recording = False
-            print('recording finished')
-
-
+            print("Recording finished")
