@@ -22,6 +22,7 @@ class VockalMain:
         transcription = self.__transcribe_audio()
         print(transcription)
         self.__remove_temp_audio()
+
         return
 
     @staticmethod

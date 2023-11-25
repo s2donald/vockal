@@ -24,7 +24,7 @@ class Listener(keyboard.Listener):
             if key.char == "p" and not self.recorder.recording:
                 self.player.start()
 
-    def on_release(self, key):
+    def on_released(self, key):
         if key is None:  # unknown event
             pass
         elif isinstance(key, keyboard.Key):  # special key event
