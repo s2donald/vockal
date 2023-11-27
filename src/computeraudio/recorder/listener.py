@@ -1,6 +1,6 @@
 from pynput import keyboard
-from vockal.recorder.player import Player
-from vockal.recorder.record import Recorder
+from computeraudio.recorder.player import Player
+from computeraudio.recorder.record import Recorder
 
 
 class Listener(keyboard.Listener):

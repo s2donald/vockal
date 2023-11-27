@@ -1,3 +1,5 @@
+from computeraudio.computeraudio import ComputerAudio
+from computeraudio.utils.constants import INITIALSOUNDFILE
 from src.vockal.vockal import VockalMain
 
 
@@ -7,5 +9,6 @@ def Vockal():
 
 
 if __name__ == "__main__":
-    result = Vockal()
+    location = ComputerAudio(INITIALSOUNDFILE).run()
+    result = VockalMain(location, "Chinese (PRC)")
     result.run()
