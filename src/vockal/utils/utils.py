@@ -1,6 +1,7 @@
 import speech_recognition as sr
 from googletrans import Translator as Trans
 
+
 def transcribe_audio(audio):
     r = sr.Recognizer()
     with sr.AudioFile(audio) as source:
@@ -8,9 +9,10 @@ def transcribe_audio(audio):
         try:
             transcription = r.recognize_google(audio)
         except sr.exceptions.UnknownValueError:
-            print('We couldn\'t hear you properly')
-            transcription = ''
+            print("We couldn't hear you properly")
+            transcription = ""
     return transcription
+
 
 def translate_text(text, code):
     translator1 = Trans()

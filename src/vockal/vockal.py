@@ -3,11 +3,10 @@ The class which is designed to handle the voice translation of a given text
 """
 import os
 
+from computeraudio.utils.constants import TRANSLATEDSPEECH, language_code
 from gtts import gTTS
 
 from vockal.utils import utils as utl
-
-from computeraudio.utils.constants import language_code, TRANSLATEDSPEECH
 
 
 class VockalMain:

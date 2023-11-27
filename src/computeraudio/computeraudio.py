@@ -4,7 +4,7 @@ from computeraudio.recorder.player import Player
 from computeraudio.recorder.record import Recorder
 
 
-class ComputerAudio():
+class ComputerAudio:
     def __init__(self, location):
         self.location = location
         self.r = Recorder(self.location)

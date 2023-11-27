@@ -1,6 +1,6 @@
-from pynput import keyboard
 from computeraudio.recorder.player import Player
 from computeraudio.recorder.record import Recorder
+from pynput import keyboard
 
 
 class Listener(keyboard.Listener):
