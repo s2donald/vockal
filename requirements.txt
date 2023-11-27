@@ -1,0 +1,9 @@
+langchain
+sounddevice
+pynput
+playsound
+pyaudio
+SpeechRecognition
+gTTS==2.4.0
+gTTS-token==1.1.4
+googletrans==3.1.0a0

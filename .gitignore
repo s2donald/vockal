@@ -1,0 +1,13 @@
+./venv
+.env
+.vscode
+.vscode/
+.xml/
+.xml
+.venv
+.venv/
+misc.xml
+.idea
+.idea/
+vcs.xml
+vockal.iml
